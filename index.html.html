@@ -93,7 +93,6 @@
         
         <!-- පළමු ඇඳුම (Product 1) -->
         <div class="product-card">
-            <!-- ඔයාගේ පළමු photo එකේ නම මෙතනට දාන්න -->
             <img src="20251117_211228.jpg" alt="Dress 1">
             <h3>Casual White T-Shirt</h3>
             <p class="price">Rs. 1,800</p>
@@ -146,10 +145,8 @@
 
     <script>
         function sendOrder(productName, price, sizeId, colorId) {
-            // ඔයාගේ WhatsApp අංකය මෙතනට නිවැරදිව දමා ඇත
             var phoneNumber = "94760288504"; 
             
-            // පාරිභෝගිකයා තෝරපු Size සහ Color එක ලබා ගැනීම
             var selectedSize = document.getElementById(sizeId).value;
             var selectedColor = document.getElementById(colorId).value;
             
@@ -160,8 +157,8 @@
                           "💰 Price: " + price + "\n\n" +
                           "Please send me the delivery details.";
             
-            var whatsappURL = "https://wa.me" + phoneNumber + "?text=" + encodeURIComponent(message);
-            window.open(whatsappURL, '_blank');
+            var whatsappURL = "https://whatsapp.com" + phoneNumber + "&text=" + encodeURIComponent(message);
+            window.location.href = whatsappURL;
         }
     </script>
 
